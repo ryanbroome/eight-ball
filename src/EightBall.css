@@ -1,0 +1,27 @@
+.EightBall {
+    display: flexbox;
+    border-radius: 50%;
+    border: 2px solid black;
+    /* background-color: black; */
+    height: 250px;
+    width: 250px;
+}
+
+.EightBall-text {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+}
+
+.EightBall-title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 10px;
+}
+
+
+
+/* Possible options for positioning and centering the data, for now just get to work */
