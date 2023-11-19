@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import "./EightBall.css";
 
 // Displays a circle "8 ball" with default state as below, when clicked returns a random choice from answers array of objects.
@@ -16,6 +16,16 @@ const EightBall = ({ answers }) => {
     let idx = randIndex();
     setText(answers[idx].msg);
     setColor(answers[idx].color);
+    reset();
+  };
+
+  // after each click reset's the eightball after 2 seconds
+  const reset = function () {
+    setTimeout(() => {
+      setText("Think of another question?");
+      setColor("black");
+    }, 2000);
+    clearTimeout(reset);
   };
 
   // Render the below on load and whenever state changes due to event trigger

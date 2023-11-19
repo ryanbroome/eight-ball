@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import EightBall from "./EightBall";
 import answers from "./Answers";
